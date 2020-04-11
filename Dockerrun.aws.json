@@ -1,32 +1,11 @@
 {
-  "AWSEBDockerrunVersion": 2,
-  "containerDefinitions": [
+  "AWSEBDockerrunVersion": "1",
+  "Image": {
+    "Name": "canadatrs/trs_destinations:latest"
+  },
+  "Ports": [
     {
-      "name": "trsdestination",
-      "image": "canadatrs/trs_destinations:latest",
-      "essential": true,
-      "memoryReservation": 256,
-      "portMappings": [
-        {
-          "hostPort": 5001,
-          "containerPort": 5001
-        }
-      ]
-	}, 
-	{	  
-      "name": "trsdestination1",
-      "image": "candatrs/trs_destinations:latest",
-      "essential": true,
-      "memoryReservation": 256,
-      "portMappings": [
-        {
-          "hostPort": 8001,
-          "containerPort": 8001
-        }
-      ],
-      "links": [
-        "trsdestination"
-      ]	  
+      "ContainerPort": "5001"
     }
   ]
 }
