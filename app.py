@@ -5,10 +5,11 @@ from flask import Flask, jsonify, request
 from flask_material import Material
 
 sql_db = mysql.connector.connect(
-  host="localhost",
+  host="tourism-database.ckl1wer2rqyx.us-east-1.rds.amazonaws.com",
   user="root",
-  passwd="root",
-  database="TRS"
+  passwd="password",
+  database="TRS",
+  port="3306"
 )
 
 cursor = sql_db.cursor()
